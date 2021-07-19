@@ -7,3 +7,27 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+/* Toya: Center content of info page, first the header. 
+**/
+h2 {
+text-align: center;
+}
+
+.center-menu { /* create a new class for menu container */
+    display: flex;
+    justify-content: center;
+}
+
+.hide{ /* create new class to hide stuff*/
+    display: none;
+}
+.thick {
+  font-weight: bold; /* for the p classes that hold "About California", About Colorado, About Massachussetts) */
+}
+
+/*
+body {
+    background-color: red;
+}
+*/

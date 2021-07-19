@@ -26,3 +26,25 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+//TODO: THIS! 
+ var pastSelection = null;
+ ; //just 
+
+ //e is the name of the option selection and name is the same as the id. 
+function changeData(e){ // function that the .html file will call: takes in the element the user selects from drop down menu and prints to console what was selected(passed into this function). The console can be viewed on the actual web page created: right click and then > select. 
+    console.log(e);
+        if(pastSelection != null){
+        pastSelection.classList.add("hide"); //add hide class 
+        }        
+        //send California info to the .html file 
+        var element = document.getElementById(e);
+        pastSelection = element
+        element.classList.remove("hide"); // show the current selection by removing its hide class
+
+}
+function firstItemLoaded(){
+   const firstItem = document.getElementById("states");
+   const selectedbydefault = firstItem.options[firstItem.selectedIndex].value // this is the value of the first item of menu selected by default
+   changeData(selectedbydefault);
+}
