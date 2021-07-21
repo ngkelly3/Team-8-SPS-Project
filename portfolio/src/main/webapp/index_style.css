@@ -1,0 +1,30 @@
+#header {
+    background-color: white;
+    color: black;
+}
+
+#links {
+    float: right;
+    font-size: 20px;
+}
+
+#content {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: auto;
+  height: 900px;
+  background-image: url('photos/hawaii.jpeg');
+  color:white;
+  font-size: 35px;
+  align-items: center;
+}
+
+#menu {
+    color: white;
+    margin-left: 50px;
+}
+
+#about {
+    text-align: center;
+    font-size: 25px;
+}
