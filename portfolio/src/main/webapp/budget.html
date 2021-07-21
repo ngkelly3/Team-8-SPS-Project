@@ -4,13 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width", initial-scale=1.0"/>
     <title>Budget</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="budget.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="budget.js"></script>
   </head>
   <body>
     <h1>Budget Page</h1>
     <header>
-      <div id="menu"><nav>
-        <ul>
+      <nav>
+        <ul id="nav">
           <li class="home">
             <a href="index.html">
               <span>Home</span>
@@ -21,12 +27,12 @@
               <span>Info</span>
             </a>
           </li>
-          <li class="home">
+          <li class="budget">
             <a href="budget.html">
               <span>Budget</span>
             </a>
           </li>
-          <li class="home">
+          <li class="schedule">
             <a href="schedule.html">
               <span>Schedule</span>
             </a>
@@ -34,5 +40,160 @@
         </ul>
       </nav></div>
     </header>
+    <div class="budget-container">
+      <div class="input-container">
+        <div class="row">
+          <div id="travel-label" class="col-25">
+            <label class="label-ts" for="travel-method">Travel Method</label>
+            <button id="refresh" onclick="Refresh()">
+              <i class="fa">&#xf021;</i>
+            </button>
+          </div>
+          <div class="col-75">
+            <select name="method" id="travel-method">
+              <option id="non1" value="-">-</option>
+              <option id="travel-vehicle" value="vehicle">Vehicle</option>
+              <option id="travel-flight" value="flight">Flight</option>
+            </select>
+          </div>
+          <div class="col-75" class="vehicle-type">
+            <select name="vehicle" id="vehicle">
+              <option id="non2" value="-">-</option>
+              <option id="rent" value="rent">Rental Car</option>
+              <option id="cab" value="cab">Cab ~ $20</option>
+            </select>
+          </div>
+          <div class="col-75" class="vehicle-type">
+            <select name="vehicle-type" id="vehicle-type">
+              <option id="non3" value="-">-</option>
+              <option id="compact" value="compact">
+                Compact (2 Adults, 2 Bags) - $30
+              </option>
+              <option id="suv" value="suv">Suv (5 Adults, 5 Bags) - $45</option>
+              <option id="luxury" value="luxury">
+                Luxury (4 Adults, 4 Bags) - $60
+              </option>
+            </select>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="flight"
+              onkeypress="kavascript:return isNumber(event)"
+              placeholder="Estimated ticket price ($)"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="label-ts" for="accommodation">Accommodation</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="accommodation"
+              onkeypress="kavascript:return isNumber(event)"
+              placeholder="Estimated price ($)"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="label-ts" for="meal">Daily Meal</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="meal"
+              onkeypress="kavascript:return isNumber(event)"
+              placeholder="Estimated daily meal price ($)"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <p id="destination">Destination</p>
+          </div>
+          <div class="col-75-checkbox">
+            <label class="container"
+              >Disneyland, California - $415
+              <input type="checkbox" id="disney" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Universal Studios, California - $350
+              <input type="checkbox" id="universal" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Santa Monica Pier, California - $50
+              <input type="checkbox" id="pier" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >New England Aquarium, Colorado - $40
+              <input type="checkbox" id="neaq" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Science Museum, Colorado - $30
+              <input type="checkbox" id="museum" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row-button">
+          <button id="submit" onclick="getDisplay()">Submit</button>
+        </div>
+      </div>
+      <div id="total-container">
+        <section id="upper">
+          <table class="budget-table">
+            <tr>
+              <td id="table-travel" class="left">Travel Method</td>
+              <td id="price-travel" class="right"></td>
+            </tr>
+            <tr>
+              <td id="table-accommodation" class="left">Accomodation</td>
+              <td id="price-accommodation" class="right"></td>
+            </tr>
+            <tr>
+              <td id="table-meal" class="left">Daily Meal</td>
+              <td id="price-meal" class="right"></td>
+            </tr>
+            <tr>
+              <td id="table-destination" class="left">Destination</td>
+              <td id="price-destination" class="right"></td>
+            </tr>
+          </table>
+          <p id="line"></p>
+          <p id="total" class="left">Total</p>
+          <p id="total-price" class="right"></p>
+        </section>
+        <section id="below">
+          <div id="important">
+            <h2>*** Important ***</h2>
+            <ul id="important-text">
+              <li>
+                The total is just estimation, it is advised to bring more money
+                for emergency.
+              </li>
+              <li>
+                The price of the rental car may vary from different company.
+              </li>
+              <li>The price of the cab may vary in other states.</li>
+              <li>
+                The prices of the destination are taken by highest cost from the
+                sources.
+              </li>
+              <li>
+                The prices of the destination may outdated, please check the
+                price from the official site.
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
