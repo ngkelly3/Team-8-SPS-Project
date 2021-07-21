@@ -1,162 +1,206 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <script src="script.js"></script> <!-- add script to here-->
+
+<head>
+    <script src="script.js"></script> <!-- add script to here-->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width", initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0" />
     <title>Info</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body onload = "firstItemLoaded()" > <!-- DEFAULT: get value of selected thing from menu-->
-    <h1>Where to?</h1>    
+    <link rel='stylesheet' href="infoStyle.css" />
+</head>
+
+<body onload="firstItemLoaded()">
+    <!-- DEFAULT: get value of selected thing from menu-->
+    <h1>Where to?</h1>
     <header>
-      <nav>
-        <ul>
-          <li class="home">
-            <a href="index.html">
-              <span>Home</span>
-            </a>
-          </li>
-          <li class="info">
-            <a href="info.html">
-              <span>Info</span>
-            </a>
-          </li>
-          <li class="home">
-            <a href="budget.html">
-              <span>Budget</span>
-            </a>
-          </li>
-          <li class="home">
-            <a href="schedule.html">
-              <span>Schedule</span> 
-            </a>
-          </li>
-        </ul>
-      </nav>
+        <nav>
+            <ul>
+                <li class="home">
+                    <a href="index.html">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="info">
+                    <a href="info.html">
+                        <span>Info</span>
+                    </a>
+                </li>
+                <li class="home">
+                    <a href="budget.html">
+                        <span>Budget</span>
+                    </a>
+                </li>
+                <li class="home">
+                    <a href="schedule.html">
+                        <span>Schedule</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <div> 
-        <h2>Select your state of interest</h2> 
+    <div>
+        <h2>Select your state of interest</h2>
 
         <label for="states"> </label> <!-- Making the label empty (no label for menu)-->
-<div class="center-menu"> <!-- When creating a new class!--> 
-    <select name="states" id="states" onchange="changeData(this.options[this.selectedIndex].value)">  <!-- Calling a function here which was defined on script.js (your javascript file)-->
-  <option value="california">California</option> <!-- corresponds to value in first item selected function in script.jsß-->
-  <option value="colorado">Colorado</option>c
-  <option value="massachusetts">Massachusetts</option>
-</select>
+        <div class="center-menu">
+            <!-- When creating a new class!-->
+            <select name="states" id="states" onchange="changeData(this.options[this.selectedIndex].value)">
+                <!-- Calling a function here which was defined on script.js (your javascript file)-->
+                <option value="california">California</option>
+                <!-- corresponds to value in first item selected function in script.jsß-->
+                <option value="colorado">Colorado</option>c
+                <option value="massachusetts">Massachusetts</option>
+            </select>
+        </div>
+
+
+        <div id="infoContent">
+            <div id="california" class="hide">
+                <p>
+
+                <h3>About California</h3>
+
+                <p class="thick">Recommended Places:</p>
+
+                <p> Runyon park in Los Angeles is a popular, elevated park. The natural scenery is beautiful. Celebrities
+                    come to this park sometimes for a break from the everyday city life.
+                    One might also choose to stroll down the streets of Hollywood in Los Angeles. Are you able to spot
+                    the Hollywood sign? You should at least be able to follow the 2000+ stars on the sidewalks,
+                    otherwise known as the Hollywood Walk of Fame! These stars celebrate the legacy of past celebrities,
+                    like Michael Jackson.
+                    Some famous and pricey attractions include Disney World and Universal Studios, which contain roller
+                    coaster rides, shows and fun for the whole family! </p>
+
+                <p>Finally, with the warmer weather prevalent in California, you should check out some of the beaches! A
+                    personal favorite of mine is the Santa Monica Pier in Santa Monica. This beach has a very fun,
+                    touristy atmosphere, with its large pier, gift stores and mini amusement park! At the amusement
+                    park, guests can p      per ride to ensure they get on the rides they please. The ocean view is beautiful.
+                    On the streets near the beach, one can find many meal options and decorative lights. </p>
+
+
+                <div class="thick">Things to be Cautious About:</div>
+
+                <p>Very high temperatures in the summer! Good sunscreen, sunglasses and a hat are recommended. You
+                    should also be careful while camping. Wildfire threats are prevalent in California. You will need a
+                    permit to start a fire on federally-owned land.
+
+                    If you are interested in swimming at the beach, San Francisco might not be the best place for you to
+                    stay. Although San Francisco has a multitude of wild beaches, (and even a nude beach!) all beaches
+                    except Aquatic Beach are not safe to swim in. There are hazardous currents in the ocean, often
+                    resulting in death.
+
+                    Fun fact: There are chrysanthemum-favored bubble teas and a Yogurtland in Pasadena, CA! </p>
+
+                </p>
+
+            </div>
+
+            <div id="colorado" class="hide">
+                <p>
+                <h3>About Colorado</h3>
+                <p class="thick">Recommended Places:</p>
+                <p> You will love Colorado Springs’ iconic nature. Its Red Rocks and Garden of the Gods feature
+                    colossal,
+                    natural rocks that many tourists and Colorado Springs natives enjoy seeing and climbing. At Red
+                    Rocks,
+                    there is an outdoor amphitheatre where anything from yoga sessions to live celebrity concerts occur!
+                </p>
+
+                <p>There are many bikers, hikers, and joggers who enjoy the ample picturesque park scenery all across
+                    Colorado.
+                    Right beside Colorado Springs is Manitou Springs, which--just like Colorado Springs--is very artsy.
+                    People like to observe meditation and other spiritual practices outdoors in Manitou.
+                    You can find a plethora of cultural indigenous works of art. There are also water fountains
+                    providing free water with lots of minerals. It is known for its healing properties. It does have a
+                    special taste!</p>
+
+                <p> Downtown Colorado and Boulder are also great places to see that are roughly
+                    an hour away from Colorado Springs by car, or two hours away by bus.
+                    (Download the bustang app on your phone for easy access to $12 bus tickets, or try Greyhound)!
+                    In downtown Denver, you can board the free, red mall shuttle rides to get to several clothing
+                    chain stores, starbucks and restaurants sprawled across several streets! You might also enjoy
+                    visiting
+                    the Denver Art Museum on one of its free visit days throughout the year! Denver does also have a
+                    Yogurtland.
+                    You might enjoy coming to Denver during the winter for the winter festivals and outdoor markets
+                    here. Finally, if you are into snow sports such as skiing, Colorado has great resorts for these activities!</p>
+
+    
+
+                <div class="thick">Things to be Cautious About:</div>
+                <p>The dry climate: In the spring and summer, Colorado is known to have a dry climate.
+                    Colorado also has a high altitude. These two factors combined can take some getting used to for
+                    newcomers.
+                    Personally, I have experienced nosebleeds in the past. Whenever I come back to Colorado Springs in
+                    the spring
+                    and summer months, I do notice the nosebleeds come back, but luckily for only a short period of
+                    time!
+                    Altitude sickness might also be something to consider, though it is not too common or long-lasting.
+                </p>
+
+                </p> <!-- To end Colorado full section-->
+
+            </div>
+
+
+            <div id="massachusetts" class="hide">
+                <h3>About Massachusetts</h3>
+                <p class="thick">Recommended Places:</p>
+
+                <p> If you enjoy the city, definitely come visit Boston! Boston is the capital city of Massachusetts.
+                    There are ample cultural celebrations in this city, especially in the South End area during the
+                    summer.
+                    You will always find activities to enjoy here, whether it is the Japanese festival in Boston Commons
+                    in the Spring,
+                    a Red Sox game at Fenway Park (prices depend on seating and time of purchase), a rollerblading
+                    outing, etc.
+                </p>
+
+                <p> As a pedestrian, you will find that in every direction, there is an area with its own pleasant
+                    atmosphere in Boston.
+                    For example, towards the North End, you may enjoy the New England Aquarium and its Whale Watch boat
+                    dock, as well
+                    as the ample Italian restaurants nearby. Towards the South End, you will see the Prudential shopping
+                    center
+                    and its various surrounding places to hang out with friends, shop and eat. Finally, in Downtown and
+                    Chinatown,
+                    you will enjoy ample restaurants, nice buildings, and exciting bubble tea places!
+                </p>
+
+                <p> The greater Boston area (which includes cities right outside of Boston) also has a lot to offer.
+                    Cambridge is a beautiful city with a harbor view, lots of bicyclists and skaters. The Science Museum
+                    rests
+                    right by the harbor. Its most fascinating exhibit is the lightning show! The transportation
+                     within Boston and a bit beyond is accessible and simple. Great restaurants and store chains are
+                    abundant in Boston and its neighboring cities.
+                 </p>
+                
+                <div class="thick">Things to be Cautious About:</div>
+                <p> If you are planning your stay at Boston, Massachusetts, you should be aware that The Logan
+                    International Airport (LIA)
+                    can be quite confusing! If you are on your way to LIA for a departure, we would encourage you to
+                    make extra time
+                    to make it to the right terminal.
+                </p>
+
+                <p>
+                    Driving in Boston can also be confusing! The road layout is a bit scattered, so please be careful
+                    with navigating. Pay special attention to road signs. A GPS could come in handy, as road signs are not 
+                    always very clear. 
+                </p>
+
+                <p>
+                    Finally, if you choose to go camping in Massachusetts, then you should be aware of some of the
+                    natural life that poses some threats, such as the lethal black widow spiders and the deer ticks that
+                    carry Lyme Disease.
+                </p>
+
+            </div>
+        </div>
     </div>
-
-
-   
-    <div id = "california" class = "hide">
-<p> 
-
-<h3>About California</h3>
-   
-<p class="thick">Recommended Places:</p>
-
-<p>Runyon park in Los Angeles is a popular, elevated park. The natural scenery is beautiful. Celebrities come to this park sometimes for a break from the everyday city life. 
-One might also choose to stroll down the streets of Hollywood in Los Angeles. Are you able to spot the Hollywood sign? You should at least be able to follow the 2000+ stars on the sidewalks, otherwise known as the Hollywood Walk of Fame! These stars celebrate the legacy of past celebrities, like Michael Jackson. 
-Some famous and pricey attractions include Disney World and Universal Studios, which contain roller coaster rides, shows and fun for the whole family! </p>
-
-<p>Finally, with the warmer weather prevalent in California, you should check out some of the beaches! A personal favorite of mine is the Santa Monica Pier in Santa Monica. This beach has a very fun, touristy atmosphere, with its large pier, gift stores and mini amusement park! At the amusement park, guests can pay
-     per ride to ensure they get on the rides they please. The ocean view is beautiful. 
-     On the streets near the beach, one can find many meal options and decorative lights. </p>
-
-
-<div class = "thick">Things to be Cautious About:</div>
-
-<p>Very high temperatures in the summer! Good sunscreen, sunglasses and a hat are recommended. You should also be careful while camping. Wildfire threats are prevalent in California. You will need a permit to start a fire on federally-owned land.
-
-If you are interested in swimming at the beach, San Francisco might not be the best place for you to stay. Although San Francisco has a multitude of wild beaches, (and even a nude beach!) all beaches except Aquatic Beach are not safe to swim in. There are hazardous currents in the ocean, often resulting in death.
-
-Fun fact: There are chrysanthemum-favored bubble teas and a Yogurtland in Pasadena, CA!  </p>
-
-</p>
-
-</div>
-
-<div id ="colorado" class = "hide">
-<p> 
-    <h3>About Colorado:</h3> 
-    <p class="thick">Recommended Places:</p>
-    <p> You will love Colorado Springs’ iconic nature. Its Red Rocks and Garden of the Gods feature colossal, 
-    natural rocks that many tourists and Colorado Springs natives enjoy seeing and climbing. At Red Rocks, 
-    there is an outdoor amphitheatre where anything from yoga sessions to live celebrity concerts occur!</p>
-
-    <p>There are many bikers, hikers, and joggers who enjoy the ample picturesque park scenery all across Colorado. 
-        Right beside Colorado Springs is Manitou Springs, which--just like Colorado Springs--is very artsy. 
-        People like to observe meditation and other spiritual practices outdoors in Manitou. 
-        You can find a plethora of cultural indigenous works of art. There are also water fountains 
-        providing free water with lots of minerals. It is known for its healing properties. It does have a special taste!</p> 
-
-    <p> Downtown Colorado and Boulder are also great places to see that are roughly
-        an hour away from Colorado Springs by car, or two hours away by bus. 
-        (Download the bustang app on your phone for easy access to $12 bus tickets, or try Greyhound)! 
-        In downtown Denver, you can board the free, red mall shuttle rides to get to several clothing 
-        chain stores, starbucks and restaurants sprawled across several streets! You might also enjoy visiting
-        the Denver Art Museum on one of its free visit days throughout the year! Denver does also have a Yogurtland. 
-        You might enjoy coming to Denver during the winter for the winter festivals and outdoor markets here.</p>
-
-<p>Finally, if you are into snow sports such as skiing, Colorado has great resorts for these activities!</p>
-
-
-    <div class = "thick">Things to be Cautious About:</div>
-    <p>The dry climate: In the spring and summer, Colorado is known to have a dry climate. 
-    Colorado also has a high altitude. These two factors combined can take some getting used to for newcomers.
-    Personally, I have experienced nosebleeds in the past. Whenever I come back to Colorado Springs in the spring
-    and summer months, I do notice the nosebleeds come back, but luckily for only a short period of time! 
-    Altitude sickness might also be something to consider, though it is not too common or long-lasting.
-</p>
-
-</p> <!-- To end Colorado full section-->    
-
- </div>
-
-
- <div id = "massachusetts" class = "hide">
-     <h3>About Massachusetts</h3>
-    <p class="thick">Recommended Places:</p>
-
- <p> If you enjoy the city, definitely come visit Boston! Boston is the capital city of Massachusetts.
-  There are ample cultural celebrations in this city, especially in the South End area during the summer. 
-  You will always find activities to enjoy here, whether it is the Japanese festival in Boston Commons in the Spring, 
-  a Red Sox game at Fenway Park (prices depend on seating and time of purchase), a rollerblading outing, etc.
- </p>
-
-<p> As a pedestrian, you will find that in every direction, there is an area with its own pleasant atmosphere in Boston.
-     For example, towards the North End, you may enjoy the New England Aquarium and its Whale Watch boat dock, as well
-      as the ample Italian restaurants nearby. Towards the South End, you will see the Prudential shopping center
-       and its various surrounding places to hang out with friends, shop and eat. Finally, in Downtown and Chinatown, 
-       you will enjoy ample restaurants, nice buildings, and exciting bubble tea places!
-</p>
-
-<p> The greater Boston area (which includes cities right outside of Boston) also has a lot to offer. 
-    Cambridge is a beautiful city with a harbor view, lots of bicyclists and skaters. The Science Museum rests
-     right by the harbor. Its most fascinating exhibit is the lightning show! 
-</p>
-
-<p>
-    The transportation within Boston and a bit beyond is accessible and simple. Great restaurants and store chains are 
-    abundant in Boston and its neighboring cities. 
-</p>
-<div class = "thick">Things to be Cautious About:</div>
-<p> If you are planning your stay at Boston, Massachusetts, you should be aware that The Logan International Airport (LIA) 
-    can be quite confusing! If you are on your way to LIA for a departure, we would encourage you to make extra time
-     to make it to the right terminal. 
-</p>
-
-<p>
-    Driving in Boston can also be confusing! The road layout is a bit scattered, so please be careful with navigating.
-</p>
-
-<p>
-    Finally, if you choose to go camping in Massachusetts, then you should be aware of some of the natural life that poses some threats, such as the lethal black widow spiders and the deer ticks that carry Lyme Disease. 
-</p>
-
-</div>
-</div>
-  </body> <!-- adding content of page in Body-- all content (paragraphs, headers, etc. go within the body) -->
+</body> <!-- adding content of page in Body-- all content (paragraphs, headers, etc. go within the body) -->
 
 </html>
+
+<!-- View> Find Command> Format Document (to allign tags nicely-->
