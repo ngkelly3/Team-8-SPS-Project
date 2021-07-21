@@ -1,11 +1,12 @@
 function isNumber(evt){
     var iKeyCode = (evt.which) ? evt.which : evt.keycode
+    //Only return if the ASCII code of the input is between 48 and 57 (ASCII for number)
     if(iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
         return false;
-
     return true;
 }
 
+//Hide the option at first until the option is selected
 jQuery(document).ready(function ($){
     $("#vehicle").hide();
     $("#vehicle-type").hide();
@@ -25,6 +26,7 @@ jQuery(document).ready(function ($){
     });
 });
 
+//Show the option when previous option is selected
 jQuery(document).ready(function ($){
     $("#vehicle").change(function(){          
         if($(this).val() == "rent"){
@@ -131,6 +133,7 @@ function getDisplay(){
 }
 
 function Refresh(){
+    //Refresh the selection function, clear the option or input when the button is clicked
     $("#travel-method").prop("selectedIndex", 0);
     $("#vehicle").prop("selectedIndex", 0);
     $("#vehicle-type").prop("selectedIndex", 0);
