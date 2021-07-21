@@ -8,8 +8,16 @@
   margin-top: 20px;
 }
 
-/* Toya: Center content of info page, first the header. 
-**/
+#infoContent { /* # with id gets applied only to section on html file with ID*/
+    font-family: sans-serif;
+    word-spacing: 2px;
+    margin-left: auto; /* auto ensures that content fits any type of screen. varying the width with automatically vary the left and right margins */
+    margin-right: auto;
+    width: 810px;
+    line-height: 2;
+}
+
+
 h2 {
 text-align: center;
 }
