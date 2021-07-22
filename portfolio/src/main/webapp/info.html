@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <script src="script.js"></script> 
+    <script src="script.js"></script> <!-- add script to here-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" , initial-scale=1.0" />
     <title>Info</title>
-     <link rel='stylesheet' href="infoStyle.css" />
-</head>                                                                       
-  <body onload = "firstItemLoaded()" > <!-- DEFAULT: get value of selected thing from menu-->
-    <div id = "header"><header>
-            <h1> Info
-            <div id = "links"><nav>
-                <a href="index.html">home</a> 
-                &nbsp;&nbsp; 
-                <a href="budget.html">budget</a> 
-                &nbsp;&nbsp; 
-                <a href="info.html">info</a> 
-                &nbsp;&nbsp; 
-                <a href="schedule.html">schedule</a>
-            </nav></div>
-        </h1></div>
+    <link rel="stylesheet" href="style.css" />
+    <link rel='stylesheet' href="infoStyle.css" />
+</head>
+<body onload="firstItemLoaded()">
+    <!-- DEFAULT: get value of selected thing from menu-->
+    <h1>Where to?</h1>
+    <header>
+        <nav>
+            <ul>
+                <li class="home">
+                    <a href="index.html">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="info">
+                    <a href="info.html">
+                        <span>Info</span>
+                    </a>
+                </li>
+                <li class="home">
+                    <a href="budget.html">
+                        <span>Budget</span>
+                    </a>
+                </li>
+                <li class="home">
+                    <a href="schedule.html">
+                        <span>Schedule</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <div>
         <h2>Select your state of interest</h2>
         <label for="states"> </label> <!-- Making the label empty (no label for menu)-->
@@ -36,14 +52,14 @@
         </div>
 
 
-        <div id="infoContent">
+       
+
             <div id="california" class="hide">
+                 <div id="infoContent">
                 <p>
 
                 <h3>About California</h3>
-
                 <p class="thick">Recommended Places:</p>
-
                 <p> Runyon park in Los Angeles is a popular, elevated park. The natural scenery is beautiful. Celebrities
                     come to this park sometimes for a break from the everyday city life.
                     One might also choose to stroll down the streets of Hollywood in Los Angeles. Are you able to spot
@@ -52,31 +68,30 @@
                     like Michael Jackson.
                     Some famous and pricey attractions include Disney World and Universal Studios, which contain roller
                     coaster rides, shows and fun for the whole family! </p>
-
                 <p>Finally, with the warmer weather prevalent in California, you should check out some of the beaches! A
                     personal favorite of mine is the Santa Monica Pier in Santa Monica. This beach has a very fun,
                     touristy atmosphere, with its large pier, gift stores and mini amusement park! At the amusement
                     park, guests can p      per ride to ensure they get on the rides they please. The ocean view is beautiful.
                     On the streets near the beach, one can find many meal options and decorative lights. </p>
-
-
                 <div class="thick">Things to be Cautious About:</div>
-
                 <p>Very high temperatures in the summer! Good sunscreen, sunglasses and a hat are recommended. You
                     should also be careful while camping. Wildfire threats are prevalent in California. You will need a
                     permit to start a fire on federally-owned land.
-
                     If you are interested in swimming at the beach, San Francisco might not be the best place for you to
                     stay. Although San Francisco has a multitude of wild beaches, (and even a nude beach!) all beaches
                     except Aquatic Beach are not safe to swim in. There are hazardous currents in the ocean, often
                     resulting in death.
-
                     Fun fact: There are chrysanthemum-favored bubble teas and a Yogurtland in Pasadena, CA! </p>
 
                 </p>
 
             </div>
+             <img src="/images/hollywood.jpeg"/>
+        </div>
+       
+            
 
+<div id="infoContent">    
             <div id="colorado" class="hide">
                 <p>
                 <h3>About Colorado</h3>
@@ -87,7 +102,6 @@
                     Rocks,
                     there is an outdoor amphitheatre where anything from yoga sessions to live celebrity concerts occur!
                 </p>
-
                 <p>There are many bikers, hikers, and joggers who enjoy the ample picturesque park scenery all across
                     Colorado.
                     Right beside Colorado Springs is Manitou Springs, which--just like Colorado Springs--is very artsy.
@@ -95,7 +109,6 @@
                     You can find a plethora of cultural indigenous works of art. There are also water fountains
                     providing free water with lots of minerals. It is known for its healing properties. It does have a
                     special taste!</p>
-
                 <p> Downtown Colorado and Boulder are also great places to see that are roughly
                     an hour away from Colorado Springs by car, or two hours away by bus.
                     (Download the bustang app on your phone for easy access to $12 bus tickets, or try Greyhound)!
@@ -106,9 +119,7 @@
                     Yogurtland.
                     You might enjoy coming to Denver during the winter for the winter festivals and outdoor markets
                     here. Finally, if you are into snow sports such as skiing, Colorado has great resorts for these activities!</p>
-
     
-
                 <div class="thick">Things to be Cautious About:</div>
                 <p>The dry climate: In the spring and summer, Colorado is known to have a dry climate.
                     Colorado also has a high altitude. These two factors combined can take some getting used to for
@@ -119,16 +130,13 @@
                     time!
                     Altitude sickness might also be something to consider, though it is not too common or long-lasting.
                 </p>
-
                 </p> <!-- To end Colorado full section-->
-
             </div>
-
-
+            </div>
+            <div id="infoContent">
             <div id="massachusetts" class="hide">
                 <h3>About Massachusetts</h3>
                 <p class="thick">Recommended Places:</p>
-
                 <p> If you enjoy the city, definitely come visit Boston! Boston is the capital city of Massachusetts.
                     There are ample cultural celebrations in this city, especially in the South End area during the
                     summer.
@@ -137,7 +145,6 @@
                     a Red Sox game at Fenway Park (prices depend on seating and time of purchase), a rollerblading
                     outing, etc.
                 </p>
-
                 <p> As a pedestrian, you will find that in every direction, there is an area with its own pleasant
                     atmosphere in Boston.
                     For example, towards the North End, you may enjoy the New England Aquarium and its Whale Watch boat
@@ -148,7 +155,6 @@
                     Chinatown,
                     you will enjoy ample restaurants, nice buildings, and exciting bubble tea places!
                 </p>
-
                 <p> The greater Boston area (which includes cities right outside of Boston) also has a lot to offer.
                     Cambridge is a beautiful city with a harbor view, lots of bicyclists and skaters. The Science Museum
                     rests
@@ -164,24 +170,24 @@
                     make extra time
                     to make it to the right terminal.
                 </p>
-
                 <p>
                     Driving in Boston can also be confusing! The road layout is a bit scattered, so please be careful
                     with navigating. Pay special attention to road signs. A GPS could come in handy, as road signs are not 
                     always very clear. 
                 </p>
-
                 <p>
                     Finally, if you choose to go camping in Massachusetts, then you should be aware of some of the
                     natural life that poses some threats, such as the lethal black widow spiders and the deer ticks that
                     carry Lyme Disease.
                 </p>
-
+</div>
             </div>
         </div>
+
+
+
     </div>
 </body> <!-- adding content of page in Body-- all content (paragraphs, headers, etc. go within the body) -->
 
 </html>
-
 <!-- View> Find Command> Format Document (to allign tags nicely-->
