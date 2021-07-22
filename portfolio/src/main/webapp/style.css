@@ -4,6 +4,16 @@
   width: 650px;
 }
 
+#header {
+    background-color: white;
+    color: black;
+}
+
+#links {
+    float: right;
+    font-size: 20px;
+}
+
 #greeting-container {
   margin-top: 20px;
 }
