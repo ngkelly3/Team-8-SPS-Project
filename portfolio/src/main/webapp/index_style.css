@@ -26,15 +26,10 @@
 #about {
     text-align: center;
     font-size: 25px;
-    color: cornsilk;
+    color:#d3e0df;
     text-shadow: darkslategrey;
     height: 10em;
     position: relative;
-}
-
-#about p {
-   margin: 0;
-   top: 50%;
-   position: relative;               
-
+    margin-right: 30pt;
+    margin-left: 30pt;
 }

@@ -8,14 +8,17 @@
     font-size: 20px;
 }
 
-#input-form {
-    align-items: center;
+#content {
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    width: 800px;
+}
+form {
+    display: inline-block;
 }
 
-#content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 650px;
+#background {
+    width: 100%;
+    background-color: #d3e0df;
 }
