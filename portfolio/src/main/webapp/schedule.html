@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width", initial-scale=1.0"/>
     <title>Schedule</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="sched_style.css" />
   </head>
   <body>
     <div id = "header"><header>
@@ -19,6 +19,19 @@
                 <a href="schedule.html">schedule</a>
             </nav></div>
         </h1></div>
+    <form action="/form-handler" method="POST">
+        <p><br><br>Edit Calendar</p>
+        <p>Start Date:</p>
+        <textarea name="start-input">mm/dd/yyyy</textarea>
+        <p>End Date:</p>
+        <textarea name="end-input">mm/dd/yyyy</textarea>
+        <p>Event Name:</p>
+        <textarea name="event-input">...</textarea>
+        <p>Event Date:</p>
+        <textarea name="date-input">...</textarea>
+        <br/>
+        <input type="submit" />
+      </form>
     <div id = "content">
          <iframe src=
          "https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23009688&amp;title=My%20Schedule&amp;showCalendars=1" 

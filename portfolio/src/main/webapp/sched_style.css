@@ -7,3 +7,15 @@
     float: right;
     font-size: 20px;
 }
+
+#input-form {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+}
